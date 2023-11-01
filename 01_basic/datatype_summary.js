@@ -33,6 +33,35 @@ const myFunction = function(){ // dataType: function
     console.log("Hello world");
 }
 
-console.log(typeof myFunction);
+// console.log(typeof myFunction);
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Memory
+
+// Stack (Primitive DataType) and Heap (Non-primitive DataType)
+
+let myName = "Naeem"
+let anotherName = myName;
+
+anotherName = "Raza"
+
+// console.log(myName)
+// console.log(anotherName)
+
+let myObj1 = {
+    name: "naeem",
+    age: 22
+}
+
+let myObj2 = myObj1
+
+console.log(myObj1);
+console.log(myObj2);
+
+myObj2.name = "Raza"
+
+console.log(myObj1.name);
+console.log(myObj2.name);
