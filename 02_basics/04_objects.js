@@ -65,19 +65,25 @@ const course = {
     courseInstructor: "hitesh"
 }
 
-// course.courseInstructor
+// course.courseInstructor // Output => hitesh
 
-// const {courseInstructor: instructor} = course
+const {courseInstructor} = course
+// console.log(courseInstructor); // Output => hitesh
 
-// console.log(courseInstructor);
-// console.log(instructor);
+// OR
 
+const {courseInstructor: instructor} = course
+// console.log(instructor); // Output => hitesh
+
+// Object JSON in which key and values both should be in double qoute ""
+// When we request on API's this type of JSON format carry data
 // {
 //     "name": "hitesh",
 //     "coursename": "js in hindi",
 //     "price": "free"
 // }
 
+// array of objects
 [
     {},
     {},
