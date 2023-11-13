@@ -69,3 +69,52 @@ setInterval(() => {
   clock.innerHTML = date.toLocaleTimeString();
 }, 1000);
 ```
+## Project 4 Solution
+
+```javascript
+
+const randomNumber = parseInt(Math.random() * 100 + 1)
+// console.log(randomNumber)
+
+let guessField = document.querySelector('#guessField');
+const subt = document.querySelector('#subt');
+const guesses = document.querySelector('.guesses');
+const lastResult = document.querySelector('.lastResult');
+const lowOrHi = document.querySelector('.lowOrHi');
+const form = document.querySelector('form');
+
+const previouesValues = []
+let remainingChance = 10;
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  if (remainingChance < 0) {
+    lowOrHi.innerHTML = `<p>Game Over, Click here to play again!</p>`
+    guessField.setAttribute('disabled', '');
+    subt.style.display = none;
+  }
+  let guessFieldValue = parseInt(guessField.value)
+  console.log(guessFieldValue)
+  previouesValues.push( guessFieldValue)
+  console.log(previouesValues)
+  guesses.innerHTML = previouesValues
+  --remainingChance;
+  lastResult.innerHTML = remainingChance
+  if (guessFieldValue === randomNumber) {
+    lowOrHi.innerHTML = `<p>Congratulations! You Won 😍🔥🔥🔥</p>`
+  } else if (guessFieldValue > randomNumber) {
+    lowOrHi.innerHTML = `<p>Higher Value</p>`
+  } else {
+    lowOrHi.innerHTML = `<p>Lower Value</p>`
+  }
+})
+
+lowOrHi.addEventListener('click', () => {
+  previouesValues = []
+  remainingChance = 10;
+  guessField.setAttribute('enable', '');
+  subt.style.display = block;
+})
+
+
+```
