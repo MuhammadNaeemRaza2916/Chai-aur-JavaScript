@@ -74,7 +74,6 @@ setInterval(() => {
 ```javascript
 
 const randomNumber = parseInt(Math.random() * 100 + 1);
-// console.log(randomNumber)
 
 let guessField = document.querySelector('#guessField');
 const subt = document.querySelector('#subt');
@@ -90,9 +89,7 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
 
   let guessFieldValue = parseInt(guessField.value);
-  // console.log(guessFieldValue)
   previouesValues.push(guessFieldValue);
-  // console.log(previouesValues)
   guesses.innerHTML = previouesValues;
   --remainingChance;
   lastResult.innerHTML = remainingChance;
@@ -103,7 +100,7 @@ form.addEventListener('submit', (e) => {
       previouesValues = [];
       remainingChance = 10;
       guessField.value = '';
-      guessField.setAttribute('enable', '');
+      guessField.removeAttribute('disabled');
       subt.style.visibility = 'visible';
     });
   } else if (guessFieldValue > randomNumber) {
@@ -118,7 +115,7 @@ form.addEventListener('submit', (e) => {
         previouesValues = [];
         remainingChance = 10;
         guessField.value = '';
-        guessField.setAttribute('enable', '');
+        guessField.removeAttribute('disabled');
         subt.style.visibility = 'visible';
         guesses.innerHTML = previouesValues;
         lastResult.innerHTML = remainingChance;
@@ -136,7 +133,7 @@ form.addEventListener('submit', (e) => {
         previouesValues = [];
         remainingChance = 10;
         guessField.value = '';
-        guessField.setAttribute('enable', '');
+        guessField.removeAttribute('disabled');
         subt.style.visibility = 'visible';
         guesses.innerHTML = previouesValues;
         lastResult.innerHTML = remainingChance;
@@ -145,7 +142,4 @@ form.addEventListener('submit', (e) => {
     }
   }
 });
-
-
-
 ```
