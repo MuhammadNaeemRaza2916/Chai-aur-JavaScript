@@ -69,7 +69,7 @@ setInterval(() => {
   clock.innerHTML = date.toLocaleTimeString();
 }, 1000);
 ```
-## Project 4 Solution
+## Project 4 Solution by Muhammad Naeem Raza
 
 ```javascript
 
@@ -142,4 +142,51 @@ form.addEventListener('submit', (e) => {
     }
   }
 });
+```
+
+## Project 4 Solution by Hitesh Choudury
+
+```javascript
+
+const randomNumber = parseInt(Math.random() * 100 + 1);
+
+const submit = document.querySelector('#subt');
+let userInput = document.querySelector('#guessField');
+const guessSlot = document.querySelector('.guesses');
+const remaining = document.querySelector('.lastResult');
+const lowOrHi = document.querySelector('.lowOrHi');
+const startOver = document.querySelector('.resultParas');
+
+const p = document.createElement('p');
+
+let prevGuess = []
+let numGuess = 1
+
+let playGame = true
+
+// to validate input is correct or not (only numbers from 1 to 100)
+function validateGuess (guess) {
+  
+}
+// to check input guess value is correct or not (lower value, higher value or Won)
+function checkGuess (guess) {
+
+}
+// to display all previous guesses value, remaining values and clear previous input
+function displayGuess (guess) {
+
+}
+// to display message according to the input from checkGuess function
+function displayMessage (message) {
+
+}
+// to end the game 
+function endGame () {
+  
+}
+// to start game again
+function newGame () {
+
+}
+
 ```
