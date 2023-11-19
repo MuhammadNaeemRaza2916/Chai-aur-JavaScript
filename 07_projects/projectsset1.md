@@ -251,13 +251,13 @@ function newGame() {
 }
 
 ```
-## Project 6 Ultimated Colors
+## Project 6 Solution  
 
 ```javascript
 // project link
 // https://stackblitz.com/edit/dom-project-chaiaurcode?file=6-unlimitedColors%2Findex.html,6-unlimitedColors%2Fchaiaurcode.js
 
-// generating random colors
+// generating random colors (Ultimated Colors)
 
 const randomColor = () => {
   const hex = '0123456789ABCDEF';
@@ -278,6 +278,7 @@ document.querySelector('#start').addEventListener('click', () => {
 
 document.querySelector('#stop').addEventListener('click', () => {
   clearInterval(intervalId);
+  intervalId = null
 });
 
 
