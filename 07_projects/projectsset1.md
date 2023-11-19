@@ -251,3 +251,34 @@ function newGame() {
 }
 
 ```
+## Project 6 Ultimated Colors
+
+```javascript
+// project link
+// https://stackblitz.com/edit/dom-project-chaiaurcode?file=6-unlimitedColors%2Findex.html,6-unlimitedColors%2Fchaiaurcode.js
+
+// generating random colors
+
+const randomColor = () => {
+  const hex = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += hex[Math.floor(Math.random() * 16)];
+  }
+  console.log(color)
+  document.body.style.backgroundColor = color
+  return color;
+};
+
+let intervalId;
+
+document.querySelector('#start').addEventListener('click', () => {
+  intervalId = setInterval(randomColor, 1000);
+});
+
+document.querySelector('#stop').addEventListener('click', () => {
+  clearInterval(intervalId);
+});
+
+
+```
