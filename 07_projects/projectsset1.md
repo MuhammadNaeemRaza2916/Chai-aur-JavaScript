@@ -251,11 +251,38 @@ function newGame() {
 }
 
 ```
+## Project 5 Solution
+
+```javascript
+
+const insert = document.getElementById('insert');
+
+window.addEventListener('keydown', (e) => {
+  insert.innerHTML = `
+  <div class="color">
+  <table>
+  <tr>
+    <th>Key</th>
+    <th>Key Code</th>
+    <th>Code</th>
+  </tr>
+  <tr>
+    <td>${e.key === ' ' ? 'Space' : e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+</table>
+  </div>
+  `;
+});
+
+
+```
+
+
 ## Project 6 Solution  
 
 ```javascript
-// project link
-// https://stackblitz.com/edit/dom-project-chaiaurcode?file=6-unlimitedColors%2Findex.html,6-unlimitedColors%2Fchaiaurcode.js
 
 // generating random colors (Ultimated Colors)
 
